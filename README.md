@@ -2,7 +2,7 @@
 
 Reusable skills for Salesforce ISVs and consulting partners.
 
-This repository is both a **Claude plugin** (`kugamon-skills`) and a **marketplace** (`kugamon`), hosted by [Kugamon LLC](https://kugamon.com). Each skill lives in its own folder under `skills/` with a `SKILL.md`, a `README.md`, and a `CHANGELOG.md`.
+This repository is both a **Claude plugin** (`kugamon-skills`) and a **marketplace** (`kugamon`), hosted by [Kugamon](https://kugamon.com). Each skill lives in its own folder under `skills/` with a `SKILL.md`, a `README.md`, and a `CHANGELOG.md`.
 
 ## Available Skills
 
