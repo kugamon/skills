@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node (in case a skill ships with scripts)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+package-lock.json
+
+# Python (in case a skill ships with scripts)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Build / temp artifacts
+*.log
+tmp/
+.tmp/
+out/
+build/
+dist/
+
+# Generated docs / artifacts that shouldn't be committed
+*.docx
+*.pdf
+*.xlsx
+!**/templates/*.docx
+!**/templates/*.pdf
+!**/templates/*.xlsx
