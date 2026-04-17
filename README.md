@@ -36,15 +36,15 @@ When new skills or updates ship, run:
 
 If you only want one skill and prefer not to install the whole bundle:
 
-1. Clone the repo (or download the skill folder you want):
+1. Clone the repo and `cd` into it:
    ```bash
    git clone https://github.com/kugamon/skills.git
+   cd skills
    ```
 2. Copy the skill folder into your local skills directory:
    ```bash
-   cp -R skills/plugins/kugamon-skills/skills/sf-message-catalog ~/.claude/skills/
+   cp -R plugins/kugamon-skills/skills/sf-message-catalog ~/.claude/skills/
    ```
-   (from inside the cloned `skills/` repo, the path is `plugins/kugamon-skills/skills/sf-message-catalog`)
 3. Restart your agent client so the new skill is picked up.
 
 Some skills have additional dependencies — see each skill's `README.md` for requirements.
