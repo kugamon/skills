@@ -1,4 +1,4 @@
-# Kugamon Skills
+# Salesforce Skills
 
 Reusable skills for Salesforce ISVs and consulting partners.
 
