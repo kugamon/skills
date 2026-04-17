@@ -17,5 +17,6 @@
     "managed-package",
     "kugamon",
     "agent-skills"
-  ]
+  ],
+  "skills": "./skills"
 }
