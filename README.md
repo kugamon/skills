@@ -2,14 +2,14 @@
 
 Reusable skills for Salesforce ISVs and consulting partners.
 
-This repository is both a **Claude plugin** (`kugamon-skills`) and a **marketplace** (`kugamon`), hosted by [Kugamon](https://kugamon.com). Each skill lives in its own folder under `skills/` with a `SKILL.md`, a `README.md`, and a `CHANGELOG.md`.
+This repository is both a **Claude plugin** (`kugamon-skills`) and a **marketplace** (`kugamon`), hosted by [Kugamon](https://kugamon.com). Each skill lives in its own folder under `plugins/kugamon-skills/skills/` with a `SKILL.md`, a `README.md`, and a `CHANGELOG.md`.
 
 ## Available Skills
 
 | Skill | What it does |
 |---|---|
-| [sf-message-catalog](skills/sf-message-catalog) | Generates a customer-facing catalog of every user-facing error, warning, info, and confirmation message in a Salesforce managed package. |
-| [sf-message-grammar-audit](skills/sf-message-grammar-audit) | Audits every user-facing message in a Salesforce managed package for grammatical issues and produces a prioritized remediation report. |
+| [sf-message-catalog](plugins/kugamon-skills/skills/sf-message-catalog) | Generates a customer-facing catalog of every user-facing error, warning, info, and confirmation message in a Salesforce managed package. |
+| [sf-message-grammar-audit](plugins/kugamon-skills/skills/sf-message-grammar-audit) | Audits every user-facing message in a Salesforce managed package for grammatical issues and produces a prioritized remediation report. |
 
 ## Installation
 
@@ -42,7 +42,7 @@ If you only want one skill and prefer not to install the whole bundle:
    ```
 2. Copy the skill folder into your local skills directory:
    ```bash
-   cp -R skills/sf-message-catalog ~/.claude/skills/
+   cp -R skills/plugins/kugamon-skills/skills/sf-message-catalog ~/.claude/skills/
    ```
 3. Restart your agent client so the new skill is picked up.
 
@@ -52,18 +52,22 @@ Some skills have additional dependencies — see each skill's `README.md` for re
 
 ```
 .claude-plugin/
-  plugin.json            <-- plugin manifest (for /plugin install)
-  marketplace.json       <-- Kugamon marketplace definition
-skills/                  <-- one folder per skill
-  sf-message-catalog/
-    SKILL.md             <-- skill definition (frontmatter + instructions)
-    README.md            <-- human-facing description
-    CHANGELOG.md         <-- version history
-  sf-message-grammar-audit/
-    ...
-LICENSE                  <-- MIT, applies to the whole repo
+  marketplace.json              <-- Kugamon marketplace definition
+plugins/
+  kugamon-skills/
+    .claude-plugin/
+      plugin.json               <-- plugin manifest (for /plugin install)
+    LICENSE                     <-- MIT (plugin-local copy, used after install)
+    skills/                     <-- one folder per skill
+      sf-message-catalog/
+        SKILL.md                <-- skill definition (frontmatter + instructions)
+        README.md               <-- human-facing description
+        CHANGELOG.md            <-- version history
+      sf-message-grammar-audit/
+        ...
+LICENSE                         <-- MIT, applies to the whole repo
 CONTRIBUTING.md
-README.md                <-- this file
+README.md                       <-- this file
 ```
 
 ## Versioning

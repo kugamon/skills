@@ -10,7 +10,7 @@ Thank you for considering a contribution. This repo is a home for reusable, well
 
 ## Skill Folder Structure
 
-Every skill lives in `skills/<skill-name>/` and contains at minimum:
+Every skill lives in `plugins/kugamon-skills/skills/<skill-name>/` and contains at minimum:
 
 | File | Required | Purpose |
 |---|---|---|
@@ -62,7 +62,7 @@ Before opening a PR:
 - [ ] `CHANGELOG.md` starts at `1.0.0` with a dated entry.
 - [ ] The top-level `README.md` has a new row in the "Available Skills" table.
 - [ ] No secrets, customer data, or PII committed.
-- [ ] Links to the repo-root `LICENSE` resolve correctly (use `../../LICENSE` from inside a skill README).
+- [ ] From inside a skill `README.md`, use `../../LICENSE` to link to the license. This resolves to the plugin-local `LICENSE` at `plugins/kugamon-skills/LICENSE` (a duplicate of the repo-root `LICENSE`), which is necessary because plugins are copied to a cache directory at install time and can't reference files outside their root.
 
 ## Licensing
 
