@@ -44,6 +44,7 @@ If you only want one skill and prefer not to install the whole bundle:
    ```bash
    cp -R skills/plugins/kugamon-skills/skills/sf-message-catalog ~/.claude/skills/
    ```
+   (from inside the cloned `skills/` repo, the path is `plugins/kugamon-skills/skills/sf-message-catalog`)
 3. Restart your agent client so the new skill is picked up.
 
 Some skills have additional dependencies — see each skill's `README.md` for requirements.
