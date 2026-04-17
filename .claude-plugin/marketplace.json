@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "kugamon-skills",
-      "source": "./",
+      "source": "./plugins/kugamon-skills",
       "description": "Reusable skills for Salesforce ISVs and consulting partners — starting with user-facing message cataloging and grammar auditing for managed packages.",
       "version": "1.0.0",
       "category": "salesforce",
