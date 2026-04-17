@@ -2,7 +2,7 @@
 
 Reusable skills for Salesforce ISVs and consulting partners.
 
-This repository is a monorepo of open-source agent skills authored by [Kugamon LLC](https://kugamon.com). Each skill lives in its own folder under `skills/` with a `SKILL.md`, a `README.md`, and a `CHANGELOG.md`.
+This repository is both a **Claude plugin** (`kugamon-skills`) and a **marketplace** (`kugamon`), hosted by [Kugamon LLC](https://kugamon.com). Each skill lives in its own folder under `skills/` with a `SKILL.md`, a `README.md`, and a `CHANGELOG.md`.
 
 ## Available Skills
 
@@ -13,9 +13,30 @@ This repository is a monorepo of open-source agent skills authored by [Kugamon L
 
 ## Installation
 
-Each skill is a standalone folder. To use one:
+There are two ways to install:
 
-1. Clone this repo (or download the skill folder you want):
+### Option 1: Install the whole plugin (recommended)
+
+Get all skills at once and receive updates automatically as new skills are added.
+
+From Claude Code or Claude Desktop:
+
+```
+/plugin marketplace add kugamon/skills
+/plugin install kugamon-skills@kugamon
+```
+
+When new skills or updates ship, run:
+
+```
+/plugin update kugamon-skills
+```
+
+### Option 2: Copy an individual skill
+
+If you only want one skill and prefer not to install the whole bundle:
+
+1. Clone the repo (or download the skill folder you want):
    ```bash
    git clone https://github.com/kugamon/skills.git
    ```
@@ -23,13 +44,16 @@ Each skill is a standalone folder. To use one:
    ```bash
    cp -R skills/sf-message-catalog ~/.claude/skills/
    ```
-3. Restart your agent client (Claude Code, Claude Desktop / Cowork, etc.) so the new skill is picked up.
+3. Restart your agent client so the new skill is picked up.
 
-Some skills have additional dependencies — see the individual skill's `README.md` for requirements.
+Some skills have additional dependencies — see each skill's `README.md` for requirements.
 
 ## Repository Layout
 
 ```
+.claude-plugin/
+  plugin.json            <-- plugin manifest (for /plugin install)
+  marketplace.json       <-- Kugamon marketplace definition
 skills/                  <-- one folder per skill
   sf-message-catalog/
     SKILL.md             <-- skill definition (frontmatter + instructions)
@@ -37,10 +61,20 @@ skills/                  <-- one folder per skill
     CHANGELOG.md         <-- version history
   sf-message-grammar-audit/
     ...
-LICENSE                  <-- MIT, applies to the whole monorepo
+LICENSE                  <-- MIT, applies to the whole repo
 CONTRIBUTING.md
 README.md                <-- this file
 ```
+
+## Versioning
+
+The plugin follows [semantic versioning](https://semver.org/):
+
+- **Patch** (`1.0.x`) — bug fixes to existing skills
+- **Minor** (`1.x.0`) — new skill added or non-breaking feature to an existing skill
+- **Major** (`x.0.0`) — breaking change to a skill's inputs or outputs
+
+See each skill's `CHANGELOG.md` for skill-level history, and the [GitHub Releases](https://github.com/kugamon/skills/releases) page for plugin-level releases.
 
 ## Contributing
 

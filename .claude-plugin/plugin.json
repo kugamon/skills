@@ -1,0 +1,21 @@
+{
+  "name": "kugamon-skills",
+  "version": "1.0.0",
+  "description": "Reusable skills for Salesforce ISVs and consulting partners, from Kugamon.",
+  "author": {
+    "name": "Kugamon LLC",
+    "email": "support@kugamon.com",
+    "url": "https://kugamon.com"
+  },
+  "homepage": "https://github.com/kugamon/skills",
+  "repository": "https://github.com/kugamon/skills",
+  "license": "MIT",
+  "keywords": [
+    "salesforce",
+    "salesforce-isv",
+    "quote-to-cash",
+    "managed-package",
+    "kugamon",
+    "agent-skills"
+  ]
+}
