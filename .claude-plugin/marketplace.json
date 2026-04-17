@@ -2,10 +2,12 @@
   "name": "kugamon",
   "owner": {
     "name": "Kugamon LLC",
-    "email": "support@kugamon.com",
-    "url": "https://kugamon.com"
+    "email": "support@kugamon.com"
   },
-  "description": "Kugamon's marketplace of open-source skills and plugins for the Salesforce ecosystem.",
+  "metadata": {
+    "description": "Kugamon's marketplace of open-source skills and plugins for the Salesforce ecosystem.",
+    "version": "1.0.0"
+  },
   "plugins": [
     {
       "name": "kugamon-skills",
