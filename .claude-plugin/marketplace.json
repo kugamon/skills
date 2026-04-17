@@ -1,0 +1,29 @@
+{
+  "name": "kugamon",
+  "owner": {
+    "name": "Kugamon LLC",
+    "email": "support@kugamon.com"
+  },
+  "metadata": {
+    "description": "Kugamon's marketplace of open-source skills and plugins for the Salesforce ecosystem.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "kugamon-skills",
+      "source": "./plugins/kugamon-skills",
+      "description": "Reusable skills for Salesforce ISVs and consulting partners — starting with user-facing message cataloging and grammar auditing for managed packages.",
+      "version": "1.0.0",
+      "category": "salesforce",
+      "tags": [
+        "salesforce",
+        "salesforce-isv",
+        "quote-to-cash",
+        "managed-package",
+        "appexchange",
+        "agent-skills"
+      ],
+      "homepage": "https://github.com/kugamon/skills"
+    }
+  ]
+}
